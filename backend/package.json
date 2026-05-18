@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Projeto NotaDez: a plataforma de gerenciamento para docentes",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "keywords": ["Docente", "Plataforma", "Gerenciamento", "Notas"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.10",
+    "oracledb": "^6.10.0"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.10",
+    "@types/body-parser": "^1.19.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.8.1",
+    "@types/nodemailer": "^7.0.3",
+    "@types/oracledb": "^6.10.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsc-watch": "^7.2.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,4 @@
+# Diretórios e arquivos que serão omitidos/não enviados ao git
+backend/node_modules/
+backend/lib/
+backend/dist/

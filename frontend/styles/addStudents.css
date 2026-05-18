@@ -1,0 +1,62 @@
+/* Autor: Noemi Kayama */
+
+/* Estilização dos botões por meio de uma classe*/
+.button-style {
+  background-color: transparent;
+  border: solid 3px #111344;
+  color: #111344;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilização do botão quando o cursor passa em cima */
+.button-style:hover {
+  cursor: pointer;
+  background-color: #111344;
+  color: #f4f4f4;
+}
+
+/* Estilização sobreescrevendo o bootstrap*/
+.form-control, .form-control:focus {
+  min-width: 80%;
+  max-width: 350px;
+  background-color: #e2e2e2;
+  border-radius: 12px;
+}
+
+/* Disposição dos botões da tela addStudents.html */
+#studentBtns {
+  gap: 30px;  
+}
+
+/* Disposição dos botões na tela students.html*/
+#students {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Disposição interna do botão*/
+#addComponent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Disposição do nome e do botão de edição/salvamento do componente de nota */
+.componentHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Botão de voltar para a páginaa da turma */
+#back {
+  border: none;
+  margin: 20px 0px;
+  background-color: #f4f4f4;
+  color: #111344;
+}

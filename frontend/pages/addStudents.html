@@ -1,0 +1,134 @@
+<!-- Autor: Noemi Kayama -->
+
+<!DOCTYPE html> <!-- Informa o tipo de documento que será utilizado nesta página -->
+<html lang="pt-br"> <!-- Informa a linguagem que será utilizada na página para orientar o browser-->
+<head>
+    <meta charset="UTF-8"> <!-- Mapa de caracteres para a página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Adequa o tamanho da tela para garantir a responsividade -->
+    <!-- Definição de favicon -->
+    <link rel="icon" href="../img/Nota_Dez_Logo_Favicon.png" type="image/png">
+    <!-- Nome da página principal -->
+    <title>NotaDez - Turmas</title>
+    <!-- Links Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Link de ícones do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Links Fontes (Farro e League Spartan)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=League+Spartan:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=League+Spartan:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Links CSS -->
+    <link type="text/css" rel="stylesheet" href="../styles/base.css">
+    <link type="text/css" rel="stylesheet" href="../styles/basePages.css">
+    <link type="text/css" rel="stylesheet" href="../styles/addStudents.css">
+</head>
+
+<body>
+    <!-- Conteúdo da página -->
+    <div id="main" class="row">
+        <!-- Sidebar/Menu lateral para acesso aos recursos do docente -->
+        <div class="sideBar d-none d-sm-flex col-sm-4 col-lg-3">
+            <!-- Definindo largura de 100% para o conteúdo sidebar -->
+            <div class="w100">
+                <!-- Seção do logo da plataforma -->
+                <div class="logoField center w100 my-4">
+                    <!-- Logo do Nota Dez com a imagem.png -->
+                    <img src="../img/Nota_Dez_branco.png" >
+                </div>
+                <div class="center my-3">
+                    <button id="logoutButton"><i class="bi bi-box-arrow-left"></i>Sair</button>
+                </div>
+                
+                <!-- Menu lateral (aberto por default) -->
+                <div id="menu-container">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Painel de controle-->
+        <div class="col-12 col-sm-8 col-lg-9">
+            <!-- Cabeçalho -->
+            <div id="header" class="my-3">
+                <!--Seção do perfil-->
+                <div id="profileField" class="center">
+                    <!-- Mensagens de boas vindas para o usuário-->
+                    <p id="greeting">Bem vindo de volta!</p>
+                    <!--Icone de usuário-->
+                    <span id="userIcon"><i class="bi bi-person-circle"></i></span>
+                </div>
+                <!-- Linha decorativa -->
+                <div class="line"></div>
+            </div>
+
+            <!-- Conteúdo principal da página -->
+            <div id="mainContent">
+                <!-- Seção com os elementos que compõem a página -->
+                <div id="mainTitle" class="mb-4 row">
+                    <!-- Seção para o título da página -->
+                    <div>
+                        <!-- Botão para voltar para a página da turma -->
+                        <button id="back"><i class="bi bi-arrow-left"></i> Voltar para turma</button>
+                    </div>
+                    <div class="row">
+                        <!-- Título que vai aparecer no topo da página: "Alunos - " -->
+                        <h1 id="studentsTitle">Alunos</h1>
+                    </div>
+                    <div id="insertNewStudents">
+                        <!-- Campos de preenchimento -->
+                        <div>
+                            <!-- Campo de preenchimento do ID do aluno -->
+                            <input id="inputID" class="formField my-3 form-floating inputBox form-control" placeholder="Matrícula do aluno">
+                            <!-- Campo de preenchimento do nome do aluno -->
+                            <input id="inputName" class="formField my-3 form-floating inputBox form-control" placeholder="Nome completo do aluno">
+                        </div>
+                        <!-- Div dos botões da página -->
+                        <div id="studentBtns">
+                            <!-- Botão "Salvar" -->
+                            <button id="btnSave" type="button" class="button-style"><i class="bi bi-floppy-fill"></i> Salvar </button>
+                            <!-- Botão "Apagar" -->
+                            <button id="btnDelete" type="button" class="button-style"><i class="bi bi-trash-fill"></i> Apagar </button>
+                            <!-- Botão para ser redirecionado para a página de importação de alunos via .csv -->
+                            <button id="btnImportStudents" type="button" class="button-style"><i class="bi bi-file-earmark-arrow-up-fill"></i>Importar .csv</button>
+                        </div>
+                        
+                    </div>
+                <!-- Fim da seção mainContent -->
+                </div>
+                
+                <!-- Seção para exibir as notas e infos dos alunos -->
+                <div class="management-section">
+
+                    <!-- Tabela de alunos que será preenchida pelo JS que tem a classe de hover para destacar a linha que tem o ponteiro do mouse -->
+                    <table class="table table-hover">
+                        <!-- Cabeçalho da tabela -->
+                        <thead>
+                            <!-- Linha da tabela que contém o cabeçalho da tabela -->
+                            <tr>
+                                <!-- Coluna que contém o check-box de seleção -->
+                                <th><input type="checkbox" id="checkBoxDeleteStudents" unchecked />  Selecionar</th>
+                                <!-- Coluna do RA -->
+                                <th>RA</th>
+                                <!-- Coluna do nome -->
+                                <th>Nome</th>
+                            </tr>
+                        </thead>
+                        <!-- Corpo da tabela -->
+                        <tbody id="table-data">
+                            <!-- Onde o JS vai preencher -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Script da página de adição/atualização de alunos -->
+    <script type="module" src="../scripts/addStudents.js"> </script>
+</body>
+
+</html>

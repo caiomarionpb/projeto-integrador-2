@@ -1,0 +1,80 @@
+<!-- Autor: Noemi Kayama -->
+<!DOCTYPE html> <!-- Informa o tipo de documento que será utilizado nesta página -->
+<html lang="pt-BR"> <!-- Informa a linguagem que será utilizada na página para orientar o browser -->
+    <head>
+        <meta charset="UTF-8"> <!-- Mapa de caracteres para a página -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Adequa o tamanho da tela para garantir a responsividade -->
+        <!-- Definição de favicon -->
+        <link rel="icon" href="../img/Nota_Dez_Logo_Favicon.png" type="image/png">
+        <!-- Links Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!--Link de ícones do Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <!-- Links Fontes (Farro e League Spartan) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=League+Spartan:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Links CSS -->
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="../styles/baseForm.css">
+        <!-- Nome da página principal -->
+        <title>NotaDez - Primeiro acesso</title>
+    </head>
+
+    
+    <body>
+        <!-- Página de confirmação de senha -->
+        <div id="form-background" class="center-col marginPage"> 
+            <!-- Parte superior da tela de login -->
+            <div id="header" class="container"> 
+                <div class="row">
+                    <!-- Linha decorativa -->
+                    <div class="d-none d-md-flex col-md-3 col-lg-4 center">
+                        <div class="line"></div>
+                    </div>
+                    <!-- Logo do Nota Dez com a imagem.png -->
+                    <div class="col-12 col-md-6 col-lg-4 center-col logoField px-5">
+                        <img src="../img/notadez_logo.png">
+                    </div>
+                    <!-- Linha decorativa -->
+                    <div class="d-none d-md-flex col-md-3 col-lg-4 center">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <row class="mb-3 center">
+                    <!-- Mensagem de boas vindas o usuário -->
+                    <p class="headerMessage">Seja bem-vindo ao NotaDez</p>
+                </row>
+            </div>
+            <!-- Conteúdo principal da página -->
+            <form id="firstAccessForm">
+                <div id="mainContent" class="center-col">
+                    <!-- Mensagem explicativa -->
+                    <p class="text-center mb-3">Notamos que esse é o seu primeiro acesso. <br>Para continuar, informe pelo menos uma instituição e uma turma para a qual você leciona.</p>
+                    <!-- Campo de preenchimento para a instituição -->
+                    <div class="formField form-floating my-3">
+                        <!-- Campo de preenchimento da instituição -->
+                        <input id="inputInstitution" type="text" class="form-control" placeholder="Nome da instituição" maxlength="120" required/>
+                        <!-- Label para o campo de preenchimento -->
+                        <label for="inputInstitution">Nome da instituição:</label>
+                    </div>
+                    <!-- Campo de preenchimento para o curso -->
+                    <div class="formField form-floating my-3">
+                        <!-- Campo de preenchimento do curso -->
+                        <input id="inputCourse" type="text" class="form-control" placeholder="Nome do curso" maxlength="100" required/>
+                        <!-- Label para o campo de preenchimento -->
+                        <label for="inputCourse">Nome do curso:</label>
+                    </div>
+                    <!-- Botão para confirmação de código -->
+                    <div class="formField my-3">
+                        <button class="button-style" type="submit" id="btnRegister">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script type="module" src="../scripts/firstAccess.js"></script>
+        <!-- Script Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>

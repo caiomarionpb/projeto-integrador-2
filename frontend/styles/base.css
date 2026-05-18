@@ -1,0 +1,62 @@
+/* Autor: Caio Marion */
+
+/* ======================================= Padrão ======================================= */
+/* Aplicado a todos os elementos e forçando para os parágrafos */
+*, p, .row{
+  margin: 0;
+  padding: 0;
+}
+  
+/* Estilização no corpo do site */
+body {
+  font-family: "Farro", Arial, sans-serif;
+}
+
+/* ======================================================================================= */
+
+/* ====================== Classes para estilização geral de elementos ===================== */
+/* Centraliza com flex-direction: row; (padrão) */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centraliza com flex-direction: column */
+.center-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Largura específica de 100% */
+.w100{
+  width: 100%;
+}
+
+/* Largura específica de 50% */
+.w50{
+  width: 50%;
+}
+
+/* ======================================================================================= */
+
+/* ======================================= Botão ====================================== */
+/* Estilo do botão */
+.button-style {
+  background-color: transparent;
+  border: solid 3px #111344;
+  color: #111344;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 40px;
+  transition: all 0.3s ease-in-out;
+}
+/* Estilização do botão quando o cursor passa em cima */
+.button-style:hover {
+  cursor: pointer;
+  background-color: #111344;
+  color: #f4f4f4;
+}
+/* ==================================================================================== */

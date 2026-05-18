@@ -1,0 +1,20 @@
+{
+ "compilerOptions": {
+    // Opções básicas
+    "module": "commonjs", // ou "ES2020", "ES2022" etc.
+    "target": "es2020", // ou algo moderno, compatível com o módulo
+    "rootDir": "./src", // Diretório de códigos TypeScript
+    "outDir": "./dist", // Diretório de saída para os arquivos compilados
+    "strict": true, // Habilita todas as verificações estritas
+    
+    // Opções de caminho e resolução dos módulos
+    "baseUrl": "./src", // Base para resolução de módulos
+
+    // Opções adicionais recomendadas
+    "esModuleInterop": true, // Habilita interoperabilidade entre módulos CommonJS e ES6
+    "skipLibCheck": true, // Pula a verificação de tipos em arquivos de declaração (.d.ts)
+    "forceConsistentCasingInFileNames": true, // Garante consistência na capitalização dos nomes de arquivos (arquivos com letras maiúsculas e minúsculas tornam-se arquivos diferentes)
+ },
+ "include": ["src/**/*"], // Inclui todos os arquivos TypeScript na pasta src
+ "exclude": ["**/*.spec.ts", "node_modules", "lib"] // Exclui arquivos de teste, do diretório node_modules e do diretório de saída
+}

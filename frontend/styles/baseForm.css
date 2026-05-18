@@ -1,0 +1,182 @@
+/* Autor: Caio Marion */
+
+/* ============================ Padronização dos formulários ============================= */
+/* Corpo da página */
+body {
+  background: linear-gradient(45deg, #111344, #2B30AA);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo dos links */
+.link-style {
+  text-decoration: none;
+  color: #00A1E4;
+  cursor: pointer;
+}
+
+/* Estilização dos links quando o cursor passa em cima */
+.link-style:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+/* ======================================================================================= */
+
+
+/* ===================== Classes para estilização geral de elementos ===================== */
+/* Centraliza com flex-direction: row; (padrão) */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centraliza com flex-direction: column */
+.center-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* ======================================================================================= */
+
+
+/* Fundo do conteúdo principal */
+#form-background {
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  padding: 2rem;
+  min-width: 40%;
+}
+
+/* ====================================== Cabeçalho ====================================== */
+#header {
+  width: 100%;
+}
+
+/* Classe para as linhas do design */
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #111344;
+}
+
+/* Centralização do texto do grupo do logo */
+.logoField p {
+  text-align: center;
+}
+
+/* Classe específica da imagem do logo */
+.logoField img {
+  max-width: 150px;
+  padding: 0 8px;
+}
+/* ==================================================================================== */
+
+/* ==================================== Formulário ==================================== */
+
+/* Cor da fonte dos labels */
+label {
+  color: #111344;
+}
+
+/* Estilização sobreescrevendo o bootstrap*/
+.form-control, .form-control:focus {
+  min-width: 80%;
+  max-width: 350px;
+  background-color: #e2e2e2;
+  border-radius: 12px;
+}
+
+/* Tamanho da fonte do link do formulário */
+.link-form {
+  font-size: 14px;
+}
+
+/* Regras de estilização da descrição de requisitos de nova senha */
+.inputRules {
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+/* Mensagem do cabeçalho */
+.headerMessage{
+  text-align: center;
+}
+
+/* Forçar margem horizontal da página para adequar à reponsividade */
+.marginPage {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.formText{
+  width: 60%;
+}
+/* ==================================================================================== */
+
+/* ===================== Botão de olho para ver ou desver a senha ===================== */
+
+/* Estilização do botão mostrar/ocultar senha */
+#mainContent .inputBox #eyeButton1 {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilização do botão mostrar/ocultar senha */
+#mainContent .inputBox #eyeButton2 {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==================================================================================== */
+
+/* ===================================== Validação ==================================== */
+
+/*Estilização da lista de validação de senha*/
+.validation ul{
+  /*Remove os marcadores padrões do <ul>*/
+  list-style: none;
+}
+
+/*Estilo das restrições de senha (quando válidos)*/
+.validation ul li.valid {
+  color: green;
+}
+
+/*Estilo das restrições de senha (quando inválidos) */
+.validation ul li.invalid {
+  color: red;
+}
+
+/*Estilização da borda da label para respostas validas */
+.validationBorder.valid {
+  border: none;
+  box-shadow: 0px 0px 10px 1px green;
+}
+
+/*Estilização da borda da label para respostas invalidas */
+.validationBorder.invalid {
+  border: none;
+  box-shadow: 0px 0px 10px 1px red;
+}
+
+/* ==================================================================================== */
